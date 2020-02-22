@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/CatPhillips88/The-WindList-Backend/issues"
   },
-  "homepage": "https://github.com/CatPhillips88/The-WindList-Backend#readme"
+  "homepage": "https://github.com/CatPhillips88/The-WindList-Backend#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }

@@ -3,13 +3,31 @@
 const serverless = require('serverless-http');
 const express = require('express')
 const app = express();
-const uuid4 = require('uuid/v4');
+const uuidv4 = require('uuid/v4');
 
 app.get('/tasks', function (req, res) {
+  const taskItems = [
+    {
+      id: uuidv4(),
+      content: 'buy travel insurance',
+      completed: false
+    },
+    {
+      id: uuidv4(),
+      content: 'train to gatwick @ 5am',
+      completed: false
+    },
+    {
+      id: uuidv4(),
+      content: 'don\'t forget passport!',
+      completed: true
+    }
+  ]
+
   res.json({
-    message: 'You got the API to work!'
-  })
-})
+    tasks: taskItems
+  });
+});
 
 
 

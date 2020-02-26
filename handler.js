@@ -3,6 +3,7 @@
 const serverless = require('serverless-http');
 const express = require('express')
 const app = express();
+const uuid4 = require('uuid/v4');
 
 app.get('/tasks', function (req, res) {
   res.json({
@@ -10,17 +11,7 @@ app.get('/tasks', function (req, res) {
   })
 })
 
+
+
 module.exports.tasks = serverless(app);
 
-// module.exports.task => async event => {
-//   return {
-//     statusCode: 200,
-//     body: JSON.stringify(
-//      {
-//        message: 'This API works'
-//      },
-//      null,
-//      2
-//     ),
-//   };
-// }

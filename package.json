@@ -19,7 +19,6 @@
   "homepage": "https://github.com/CatPhillips88/The-WindList-Backend#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "serverless": "^1.64.0",
     "serverless-http": "^2.3.1"
   }
 }

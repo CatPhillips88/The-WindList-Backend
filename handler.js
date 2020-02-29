@@ -1,7 +1,7 @@
 'use strict';
 
 const serverless = require('serverless-http');
-const express = require('express')
+const express = require('express');
 const app = express();
 const uuidv4 = require('uuid/v4');
 
@@ -28,6 +28,28 @@ app.get('/tasks', function (req, res) {
     tasks: taskItems
   });
 });
+
+// CREATING TASKS
+app.post('/tasks', function (req, res) {
+  res.json({
+    message: 'Your POST works'
+  });
+});
+
+// UPDATING TASKS
+app.put('/tasks/taskId', function (req, res) {
+  res.json({
+    message: 'Your PUT works',
+  });
+});
+
+// DELETING TASKS
+app.delete('/tasks/taskId', function (req, res) {
+  res.json({
+    message: 'Your DELETE works',
+  });
+});
+
 
 
 

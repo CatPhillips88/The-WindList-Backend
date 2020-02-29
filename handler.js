@@ -37,14 +37,14 @@ app.post('/tasks', function (req, res) {
 });
 
 // UPDATING TASKS
-app.put('/tasks/taskId', function (req, res) {
+app.put('/tasks/:taskId', function (req, res) {
   res.json({
     message: 'Your PUT works',
   });
 });
 
 // DELETING TASKS
-app.delete('/tasks/taskId', function (req, res) {
+app.delete('/tasks/:taskId', function (req, res) {
   res.json({
     message: 'Your DELETE works',
   });

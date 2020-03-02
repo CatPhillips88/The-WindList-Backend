@@ -4,6 +4,14 @@ const serverless = require('serverless-http');
 const express = require('express');
 const app = express();
 const uuidv4 = require('uuid/v4');
+const mysql = require('mysql');
+
+const connection = mysql.createConnection({
+  host     : 'example.org',
+  user     : 'bob',
+  password : 'secret',
+  database : 'my_db'
+});
 
 // RETRIEVE TASKS
 app.get('/tasks', function (req, res) {

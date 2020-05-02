@@ -151,6 +151,7 @@ const notes = [{
 // }
 
 // find EXAMPLE 1
+
 const findNote = function (notes, noteTitle) {
    return notes.find(function (note, index) {
       return note.title.toLowerCase() === noteTitle.toLowerCase()
